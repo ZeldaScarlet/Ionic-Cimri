@@ -1,0 +1,12 @@
+<ion-card class="product_card">
+  <ion-img src={{productImage}} class="product_img" ></ion-img>
+  <ion-card-content>
+     <p>{{productName}}</p>
+  </ion-card-content>
+  <ion-item lines="full">
+    <ion-label>{{productPrice}} TL</ion-label>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-button fill="outline" slot="end" class="button" (click)="goDetails(productModel, productName, productImage)">Tümünü İncele</ion-button>
+  </ion-item>
+</ion-card>

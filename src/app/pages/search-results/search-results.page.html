@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <searchbar></searchbar>
+    <ion-buttons slot="end">
+      <ion-button class="iconbutton">
+      <ion-icon name="heart" slot="end" size="large" class="icon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let product of Product |filter:term; count as i">
+        <product-container productName = {{product.title}} [productImage] = "product.image_source" productPrice = {{product.price}} productModel = {{product.model_no}}></product-container>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+<div *ngIf="productlength == 0">
+  <ion-icon name="search-sharp" class="searchicon"></ion-icon>
+  <h4 class="metin">Aradığınız Kriterlere Uygun Sonuç Bulunamamıştır</h4>
+</div>
+  
+</ion-content>

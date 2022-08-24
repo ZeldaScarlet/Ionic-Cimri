@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <input type="text" [(ngModel)]="term">
+    <div *ngFor = "let product of Products |filter:term" >
+      <p>
+        {{product.title}}
+      </p>
+    </div>
+
+</div>  
+</ion-content>

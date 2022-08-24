@@ -1,0 +1,23 @@
+.product_img{
+    object-fit: contain;
+    width: auto;
+    height: 400px;
+}
+
+ion-card{
+    box-shadow: none !important;
+}
+
+.title{
+    text-align: center;
+}
+
+.price{
+    text-size-adjust: 30px;
+}
+
+.buttonforsomething{
+    box-shadow: none !important;
+    --background: rgb(56,128,255);
+    color: azure;
+}

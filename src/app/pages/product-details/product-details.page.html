@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <searchbar></searchbar>
+    <ion-buttons slot="end">
+      <ion-button class="iconbutton">
+        <ion-icon name="heart" slot="end" size="large" class="icon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-card class="product_card">
+      <ion-img [src]="product_image_source" class="product_img"></ion-img>
+      <ion-card-title class="title"> {{product_title}} </ion-card-title>
+    </ion-card>
+  </div>
+
+  <h4 style="margin: 20px;">Tüm Fiyatlar</h4>
+
+  <ion-card *ngFor="let product of Product">
+    <ion-item lines="none">
+      <ion-label slot="start">{{product.title}}</ion-label>
+      <ion-label slot="end" class="price"><h1>{{product.price}} TL</h1></ion-label>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label slot="start">{{product.site_name}}</ion-label>
+      <ion-button slot="end" fill="outline" class="buttonforsomething" (click)="openBrowser(product.link)">Siteye Git</ion-button>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

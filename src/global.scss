@@ -1,0 +1,87 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import '~swiper/scss';
+@import '~@ionic/angular/css/ionic-swiper';
+
+ion-searchbar.collapsible {
+  position: relative;
+  width: 80%;
+  transition: width 0.5s ease-in-out;
+  --border-radius: 10px;
+
+  .searchbar-input.sc-ion-searchbar-md {
+    transition-property: padding-inline-end, -webkit-padding-end;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &.searchbar-has-focus,
+  &.searchbar-has-value {
+    width: 105%;
+    z-index: 10;
+  }
+
+  &:not(.searchbar-has-focus):not(.searchbar-has-value):hover input {
+    cursor: pointer;
+    background: var(--ion-color-step-100);
+  }
+
+  &:not(.searchbar-has-focus),
+  &:not(.searchbar-has-value) {
+    .searchbar-input.sc-ion-searchbar-md {
+      -webkit-padding-end: 0;
+      padding-inline-end: 0;
+    }
+  }
+}
+
+ion-toolbar {
+  --background: rgb(248, 248, 248);
+  height: 110%;
+}
+
+.iconbutton {
+  position: relative;
+  right: 0px;
+  left: 18px;
+  z-index: 0;
+}
+
+.icon {
+  position: relative;
+  right: 18px;
+  bottom: -3px;
+}
+
+ion-content {
+  --ion-background-color: rgb(248, 248, 248);
+}
+
+ion-card {
+  --ion-background-color: rgb(255, 255, 255);
+}
+

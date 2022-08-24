@@ -1,0 +1,39 @@
+ion-card-content{
+  height: 42px;
+}
+
+.title{
+  margin: 10px;
+  font-size: 20px;
+}
+
+.product_card{
+  position: relative;
+  height: 94%;
+  
+}
+
+p{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 100%;
+  width: 100%;
+  -webkit-line-clamp: 6;
+}
+
+.product_img{
+  object-fit: contain;
+  width: auto;
+  height: 178px;
+}
+
+.button{
+  /*Change the width as much as you like, but make sure 
+  margin-left and margin-right + width = 100%*/
+  width:90%;
+ 
+  margin-left:5%;
+  margin-right:5%;
+  position: relative;
+}

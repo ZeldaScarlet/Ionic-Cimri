@@ -1,0 +1,91 @@
+ion-toolbar{
+  --background: rgb(248, 248, 248);
+  height: 110%;
+}
+
+ion-segment-button {
+  height: 35px;
+  min-height: 30px;
+  text-size-adjust: 10px;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.iconbutton{
+  position: relative;
+  right: 0px;
+  left: 18px;
+  z-index: 0;
+}
+.icon{
+  position: relative;
+  right: 18px;
+  bottom: -3px;
+}
+
+.title{
+  margin: 10px;
+  font-size: 20px;
+}
+
+.product_card{
+  position: relative;
+  height: 94%;
+  
+}
+
+p{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 100%;
+  width: 100%;
+}
+
+.product_img{
+  object-fit: contain;
+  width: auto;
+  height: 178px;
+}
+
+.button{
+  /*Change the width as much as you like, but make sure 
+  margin-left and margin-right + width = 100%*/
+  width:90%;
+ 
+  margin-left:5%;
+  margin-right:5%;
+  position: relative;
+}
+
+ion-searchbar.collapsible {
+  position: relative;
+  width: 80%;
+  transition: width 0.5s ease-in-out;
+  --border-radius: 10px;
+ 
+  .searchbar-input.sc-ion-searchbar-md {
+    transition-property: padding-inline-end, -webkit-padding-end;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+ 
+  &.searchbar-has-focus,
+  &.searchbar-has-value {
+    width: 105%;
+    z-index: 10;
+  }
+ 
+  &:not(.searchbar-has-focus):not(.searchbar-has-value):hover input {
+    cursor: pointer;
+    background: var(--ion-color-step-100);
+  }
+ 
+  &:not(.searchbar-has-focus),
+  &:not(.searchbar-has-value) {
+    .searchbar-input.sc-ion-searchbar-md {
+      -webkit-padding-end: 0;
+      padding-inline-end: 0;
+    }
+  }
+}
